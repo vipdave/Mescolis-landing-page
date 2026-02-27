@@ -114,7 +114,7 @@ function HomePage({ onNav }) {
             <span style={{ fontSize: 18, fontWeight: 800, color: T.navy }}>MesColis.ca</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-            {["Solutions", "How It Works", "Pricing", "Contact"].map(l => (<span key={l} style={{ fontSize: 14, fontWeight: 500, color: T.sub, cursor: "pointer" }}>{l}</span>))}
+            {["B2B", "B2C", "C2C", "POS Walk-Up", "Pricing"].map(l => (<span key={l} style={{ fontSize: 14, fontWeight: 500, color: T.sub, cursor: "pointer" }}>{l}</span>))}
             <div style={{ display: "flex", background: "rgba(0,0,0,.05)", borderRadius: 6, overflow: "hidden" }}>
               <button style={{ padding: "5px 10px", fontSize: 11, fontWeight: 700, border: "none", background: T.blue, color: "#fff", borderRadius: 4, cursor: "pointer" }}>EN</button>
               <button style={{ padding: "5px 10px", fontSize: 11, fontWeight: 700, border: "none", background: "transparent", color: T.gray, cursor: "pointer" }}>FR</button>
@@ -137,13 +137,13 @@ function HomePage({ onNav }) {
             <h1 style={{ fontSize: "clamp(2.8rem,5vw,4rem)", fontWeight: 800, color: "#fff", lineHeight: 1.1, marginBottom: 24, animation: "fu .6s ease .35s both" }}>
               Canada's First<br /><span style={{ background: "linear-gradient(135deg," + T.orange + ",#ffcc4d)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Smart B2B Locker</span><br />Network
             </h1>
-            <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,.65)", maxWidth: 480, marginBottom: 32, animation: "fu .6s ease .5s both" }}>Carrier-agnostic, 24/7 locker-to-locker delivery infrastructure for couriers, 3PLs, and cross-border commerce. Purpose-built for Canada.</p>
+            <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,.65)", maxWidth: 480, marginBottom: 32, animation: "fu .6s ease .5s both" }}>Open, carrier-agnostic smart locker network with integrated POS terminals. Walk up, pay, drop off — no app required. Works with DHL, Purolator, Canada Post, UPS, and FedEx.</p>
             <div style={{ display: "flex", gap: 16, animation: "fu .6s ease .65s both" }}>
               <Btn onClick={() => onNav("register")}>Start Free Pilot →</Btn>
               <Btn v="ghost">See How It Works</Btn>
             </div>
             <div style={{ display: "flex", gap: 40, marginTop: 40, paddingTop: 24, borderTop: "1px solid rgba(255,255,255,.08)", animation: "fu .6s ease .8s both" }}>
-              {[["99%", "First-attempt delivery"], ["24/7", "Pickup & drop-off"], ["40%", "Lower last-mile cost"]].map(([n, l]) => (
+              {[["99%", "First-attempt delivery"], ["40%", "Lower last-mile cost"], ["$12.8B", "Canadian market (TAM)"]].map(([n, l]) => (
                 <div key={n}><div style={{ fontSize: 28, fontWeight: 800, color: T.orange, lineHeight: 1 }}>{n}</div><div style={{ fontSize: 12, color: "rgba(255,255,255,.45)", marginTop: 4 }}>{l}</div></div>
               ))}
             </div>
@@ -166,7 +166,7 @@ function HomePage({ onNav }) {
       <Sec tag="How It Works" title="Ship smarter in 4 simple steps" sub="From label creation to locker pickup — our platform handles the entire delivery flow.">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 32, position: "relative" }}>
           <div style={{ position: "absolute", top: 44, left: "12%", right: "12%", height: 2, background: "linear-gradient(90deg," + T.orange + "," + T.blue + "," + T.orange + ")", opacity: 0.15 }} />
-          {[["1", "Connect via API", "Integrate your shipping platform with our open REST API."], ["2", "Generate Shipment", "Create labels, assign locker destinations, get rates."], ["3", "Drop at Locker", "Courier drops at nearest smart locker. 99% success."], ["4", "Pickup 24/7", "Recipient gets SMS + email with QR code or PIN."]].map(([num, title, desc]) => (
+          {[["1", "Connect via API or Walk Up", "Integrate via REST API or use our POS terminal — no app needed."], ["2", "Generate Shipment", "Create labels, compare rates across carriers, assign locker destinations."], ["3", "Drop at Locker", "Courier or sender drops at nearest smart locker. Pay via tap, Apple Pay, or Interac."], ["4", "Pickup 24/7", "Recipient gets bilingual SMS + email (FR/EN) with QR code or PIN."]].map(([num, title, desc]) => (
             <div key={num} style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
               <div style={{ width: 64, height: 64, margin: "0 auto 20px", background: "linear-gradient(135deg," + T.blue + "," + T.blueDk + ")", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, fontWeight: 800, color: "#fff", boxShadow: "0 8px 24px rgba(27,110,194,.25)" }}>{num}</div>
               <h3 style={{ fontSize: 16, fontWeight: 700, color: T.navy, marginBottom: 8 }}>{title}</h3>
@@ -179,7 +179,7 @@ function HomePage({ onNav }) {
       {/* FEATURES */}
       <Sec tag="Platform Features" title="Everything for modern last-mile logistics" sub="Built for couriers, 3PLs, and e-commerce businesses." bg={T.off}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20 }}>
-          {[["🌐", "#dbeafe", "Carrier-Agnostic", "Multi-carrier utilization improves network density and ROI."], ["📦", "#d1fae5", "Locker-to-Locker", "Micro-hub distribution, consolidated drops, and returns."], ["🌍", "#ffedd5", "Cross-Border Ready", "Zonos-powered duties, taxes, and landed cost."], ["🔌", "#e0e7ff", "Open REST API", "Integrates with any courier, 3PL, or e-commerce system."], ["🇨🇦", "#fce7f3", "Bilingual (FR/EN)", "Native French and English interfaces."], ["📊", "#fef3c7", "Real-Time Analytics", "Track utilization, delivery rates, and revenue."]].map(([ic, bg, t, d]) => (
+          {[["🌐", "#dbeafe", "Carrier-Agnostic", "Works with DHL, Purolator, Canada Post, UPS, FedEx — and any carrier via open API."], ["📦", "#d1fae5", "Walk-Up POS Terminal", "No app needed. 10.1\" touchscreen with tap payment, Apple Pay, Google Pay, and Interac."], ["🌍", "#ffedd5", "Cross-Border Ready", "Zonos-powered duties, taxes, and landed cost for US-Canada e-commerce."], ["🔌", "#e0e7ff", "Open REST API", "Integrates with ShipTime, Shopify, WooCommerce, and any 3PL or e-commerce system."], ["🇨🇦", "#fce7f3", "Bilingual (FR/EN)", "Native French and English across app, POS screens, SMS, and email notifications."], ["📊", "#fef3c7", "IoT-Enabled Lockers", "Real-time monitoring via AWS IoT Core. 4G LTE + Wi-Fi with offline queuing."]].map(([ic, bg, t, d]) => (
             <div key={t} className="fcard" style={{ background: "#fff", borderRadius: 16, padding: "2rem 1.8rem", border: "1px solid rgba(0,0,0,.04)" }}>
               <div style={{ width: 52, height: 52, borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, marginBottom: 18, background: bg }}>{ic}</div>
               <h3 style={{ fontSize: 16, fontWeight: 700, color: T.navy, marginBottom: 10 }}>{t}</h3>
@@ -220,7 +220,7 @@ function HomePage({ onNav }) {
         <div style={{ position: "absolute", top: "-30%", right: "-15%", width: 600, height: 600, background: "radial-gradient(circle,rgba(245,148,30,.1),transparent 60%)", pointerEvents: "none" }} />
         <div style={{ textAlign: "center", position: "relative", zIndex: 2, maxWidth: 700, margin: "0 auto", padding: "0 2rem" }}>
           <h2 style={{ fontSize: "clamp(2rem,4vw,2.6rem)", fontWeight: 800, color: "#fff", marginBottom: 14 }}>Ready to modernize your last-mile?</h2>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,.6)", marginBottom: 32 }}>Join the pilot. Deploy smart lockers. Cut costs by 40%.</p>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,.6)", marginBottom: 32 }}>Join our Quebec pilot. 50 smart lockers deploying across Montreal, Laval, and Longueuil. 90-day free trial for enterprise clients.</p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center" }}><Btn onClick={() => onNav("register")}>Start Free Pilot →</Btn><Btn v="ghost">Contact Sales</Btn></div>
         </div>
       </section>
@@ -234,9 +234,9 @@ function HomePage({ onNav }) {
                 <div style={{ width: 32, height: 32, background: "linear-gradient(135deg," + T.orange + "," + T.orangeLt + ")", borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, fontWeight: 800, color: "#fff" }}>M</div>
                 <span style={{ fontSize: 16, fontWeight: 700, color: "rgba(255,255,255,.8)" }}>MesColis.ca</span>
               </div>
-              <p style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 280 }}>Canada's first carrier-agnostic smart locker network for B2B last-mile logistics.</p>
+              <p style={{ fontSize: 14, lineHeight: 1.7, maxWidth: 280 }}>Quebec-based technology company building Canada's first open, carrier-agnostic smart locker network. Bilingual. Purpose-built for Canada.</p>
             </div>
-            {[{ t: "Product", l: ["Solutions", "How It Works", "API Docs", "Pricing"] }, { t: "Company", l: ["About", "Blog", "Careers", "Contact"] }, { t: "Legal", l: ["Privacy", "Terms", "Cookies"] }].map(c => (
+            {[{ t: "Product", l: ["B2B Lockers", "B2C Delivery", "C2C Shipping", "POS Walk-Up", "API Docs"] }, { t: "Company", l: ["About", "Careers", "Blog", "Contact"] }, { t: "Legal", l: ["Privacy", "Terms", "Bill 96"] }].map(c => (
               <div key={c.t}><h4 style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "rgba(255,255,255,.3)", marginBottom: 16 }}>{c.t}</h4>{c.l.map(l => (<a key={l} href="/#" style={{ display: "block", fontSize: 14, color: "rgba(255,255,255,.55)", textDecoration: "none", marginBottom: 10 }}>{l}</a>))}</div>
             ))}
           </div>
